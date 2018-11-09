@@ -2,14 +2,16 @@ package fr.unilim.iut.katatennis;
 
 public class TennisGame1 implements TennisGame {
 
-	private int mScore1 = 0;
-	private int mScore2 = 0;
+	private int mScore1;
+	private int mScore2 ;
 	private String player1Name;
 	private String player2Name;
 
 	public TennisGame1(String player1Name, String player2Name) {
 		this.player1Name = player1Name;
 		this.player2Name = player2Name;
+		this.mScore1=0;
+		this.mScore2=0;
 	}
 
 	public void wonPoint(String playerName) {
