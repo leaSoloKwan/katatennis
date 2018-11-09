@@ -22,6 +22,7 @@ public class TennisGame1 implements TennisGame {
 	public String getScore() {
 		String score = "";
 		int tempScore = 0;
+		StringBuilder bld=new StringBuilder();
 		if (mScore1 == mScore2) {
 			switch (mScore1) {
 			case 0:
@@ -53,23 +54,32 @@ public class TennisGame1 implements TennisGame {
 				if (i == 1)
 					tempScore = mScore1;
 				else {
-					score += "-";
+					bld.append("-");
+					
 					tempScore = mScore2;
 				}
 				switch (tempScore) {
 				case 0:
-					score += "Love";
+					bld.append("Love");
+					
 					break;
 				case 1:
-					score += "Fifteen";
+					bld.append("Fifteen");
+					
 					break;
 				case 2:
-					score += "Thirty";
+					bld.append("Thirty");
+					
 					break;
 				case 3:
-					score += "Forty";
+					bld.append("Forty");
+					
+					break;
+				default :
+					
 					break;
 				}
+				score=bld.toString();
 			}
 		}
 		return score;
